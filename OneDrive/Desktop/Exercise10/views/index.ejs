@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+ <head>
+     <link href="/assets/styles.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <% include partials/nav.ejs %>
+    <h1>Home page!</h1>
+    <h1>Student Infomation</h1>
+      <form id="index-form" method="POST" action="<%= action %>">
+        <input type="text" placeholder="First name" name="firstname" value="<%= prefilled.firstName %>" required <%= readOnly %>><br>
+        <input type="text" placeholder="Last name" name="lastname" value="<%= prefilled.lastName %>" required <%= readOnly %>><br>
+        <input type="text" placeholder="Degree" name="degree" required><br>
+        <input type="text" placeholder="Program" name="program" required>
+        <input type="number" placeholder="Grad year" min="1900" max="2020" name="date" required>
+        <input type="email" placeholder="Your email" name="email" required>
+        <input type="submit" value="submit" <p>The Post Count <%= count %></p>
+        <a href="/views/studentForm">Posted on mongodb</a>
+      </form>
+
+    </body>
+</html>

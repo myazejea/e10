@@ -1,0 +1,25 @@
+body{background: skyblue; font-family: verdana; color: #fff; padding: 30px;}
+head{background: skyblue; font-family: verdana; color: #fff; padding: 30px; }
+h1{font-size: 48px; text-transform: uppercase; letter-space: 2px; text-align: center;}
+p{font-size: 20px; text-align: center;}
+input {
+  width: 50%;
+  padding: 6px 20px;
+  margin: 4px 0;
+  display: block;
+  border: 1px solid #ccc;
+  border-radius: 2px;
+  box-sizing: border-box;}
+input[type=date]{width: 50%;
+  padding: 6px 20px;
+  margin: 4px 0;
+  display: block;
+  border: 1px solid #ccc;
+  border-radius: 2px;
+  box-sizing: border-box;}
+
+ input[type=submit]{width: 10%;
+ display: block-inline;
+ align: center;
+ margin: 10px;
+ border-radius: 5px}

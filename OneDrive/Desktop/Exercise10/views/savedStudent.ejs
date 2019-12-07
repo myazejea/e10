@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="/assets/styles.css" rel="stylesheet" type="text/css" />
+
+      <title>Saved Student Info</title>
+  </head>
+  <body>
+    <% include partials/nav.ejs %>
+
+    <h1>Student Database</h1>
+    <form action="/collection" method="POST">
+        <table id="list" border="1"align="center">
+           <tr>
+               <th>Students Id</th>
+               <th>First Name </th>
+               <th>Last Name</th>
+               <th>Degree</th>
+               <th>Program</th>
+               <th>Graduation Date</th>
+               <th>Email</th>
+               <th>Action</th>
+             </tr>
+
+          <% for (var i =0; i< data.length; i++){ %>
+            <tr>
+            <td> <%= data[i]._id %> </td>
+            <td> <%= data[i].firstName %> </td>
+            <td> <%= data[i].lastName %> </td>
+            <td> <%= data[i].degree %> </td>
+            <td> <%= data[i].program %> </td>
+            <td> <%= data[i].date %> </td>
+            <td> <%= data[i].email %> </td>
+            <td><a href="/update/<%= data[i]._id %>" class="update">Update</a></td>
+            <td><button type="submit" name="idToDel" value="<%= data[i]._id %>">Delete</button></td>
+            <td> </td>
+          </tr>
+            <%}%>
+
+
+
+       </table>
+     </form>
+       <span id="val"</span>
+
+  </body>
+</html>
